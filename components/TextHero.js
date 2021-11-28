@@ -10,7 +10,7 @@ export default function TextHero() {
           {/* Title */}
           <div className="flex-col text-3xl lg:text-5xl font-serif font-semibold lg:leading-snug">
             <h3 className="max-w-md">
-              A world where no child's life is torn apart by war.
+              A world where no child&apos;s life is torn apart by war.
             </h3>
           </div>
 
