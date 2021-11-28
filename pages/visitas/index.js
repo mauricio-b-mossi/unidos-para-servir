@@ -1,9 +1,8 @@
 import React from "react";
 import Link from "next/link";
-import Visita from "../../components/Visita";
 import Nav from "../../components/Nav";
 
-export default function index() {
+export default function index({visitas}) {
   return (
     <div className=" min-h-screen w-full p-4 sm:p-6 md:p-8 lg:p-10">
       <Nav />
@@ -27,36 +26,42 @@ export default function index() {
 
           {/* Card Slider Of Visits */}
           <div className="grid grid-cols-3 justify-center items-center gap-16">
-            <Visita
-              key={1}
-              date={"01.11.2021"}
-              title={"Visita El Espino"}
-              description={
-                "Hoy visitamos el espino con la ayuda de fundacion mano amiga"
-              }
-              image={"/jXev1.jpeg"}
-            />
-            <Visita
-              key={2}
-              date={"01.11.2021"}
-              title={"Visita El Espino"}
-              description={
-                "Hoy visitamos el espino con la ayuda de fundacion mano amiga"
-              }
-              image={"/jXev1.jpeg"}
-            />
-            <Visita
-              key={3}
-              date={"01.11.2021"}
-              title={"Visita El Espino"}
-              description={
-                "Hoy visitamos el espino con la ayuda de fundacion mano amiga"
-              }
-              image={"/jXev1.jpeg"}
-            />
+            {visitas &&
+              visitas.map((visita, index) => (
+                <SwiperSlide key={index}>
+                  <div className="relative col-span-3 md:col-span-1">
+                    <Image
+                      src={visita.mainImage.asset.url}
+                      width={600}
+                      height={600}
+                      key={visita.mainImage.asset.id}
+                    />
+                    <div className="flex flex-col justify-center items-center text-center absolute inset-0 bg-main-blue opacity-0 transition ease-in-out hover:opacity-100 text-white font-bold text:lg md:text:xl lg:text-2xl oldstyle-nums p-8 space-y-2">
+                      <h3>{visita.publishedAt}</h3>
+                      <h3>{visita.title}</h3>
+                      <p className="text-xs lg:text-sm text-center">
+                        {visita.description}
+                      </p>
+                    </div>
+                  </div>
+                </SwiperSlide>
+              ))}
           </div>
         </div>
       </div>
     </div>
   );
 }
+
+export const getServerSideProps = async ({ params }) => {
+const visitasQuery = `*[_type == "visitas"]{
+ title, description, publishedAt, body, mainImage{asset->{_id, url}}, slug
+  }
+  `;
+   return {
+     props: {
+       visitas,
+     },
+   };
+
+ }

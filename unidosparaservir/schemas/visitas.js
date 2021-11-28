@@ -12,7 +12,7 @@ export default {
       name: "description",
       title: "Descripcion Breve",
       type: "text",
-      validation: (Rule) => Rule.required().min(5).max(25),
+      validation: (Rule) => Rule.required().min(5).max(75),
     },
     {
       name: "slug",
@@ -34,7 +34,7 @@ export default {
     {
       name: "publishedAt",
       title: "Fecha",
-      type: "datetime",
+      type: "date",
     },
     {
       name: "body",

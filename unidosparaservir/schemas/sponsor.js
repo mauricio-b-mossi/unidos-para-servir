@@ -1,5 +1,5 @@
 export default {
-  name: "sponsor",
+  name: "patrocinadores",
   title: "Patrocinador",
   type: "document",
   fields: [

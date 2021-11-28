@@ -6,7 +6,7 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 
 // We import object and document schemas
 import blockContent from './blockContent'
-import post from './post'
+import visitas from './visitas'
 import member from './member'
 import sponsor from './sponsor'
 import Ayudar from './Ayudar'
@@ -23,7 +23,7 @@ export default createSchema({
     // in the studio.
     Ayudar,
     QuienesSomos,
-    post,
+    visitas,
     member,
     sponsor,
     // When added to this list, object types can be used as

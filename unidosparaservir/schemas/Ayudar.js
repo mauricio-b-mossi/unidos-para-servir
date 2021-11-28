@@ -1,6 +1,6 @@
 export default {
-  name: "visitas",
-  title: "Visitas",
+  name: "ayudar",
+  title: "Ayudar",
   type: "document",
   fields: [
     {

@@ -1,12 +1,12 @@
 import React from "react";
 import Image from "next/image";
-import Visita from "./Visita";
 import Link from 'next/link'
 import Swiper from './Swiper'
 import visitas from "../visitas.json";
 import SwiperMobile from './SwiperMobile'
 
-export default function NuestrasVisitas() {
+export default function NuestrasVisitas({ visitas }) {
+  console.log('visitas');
   return (
     <div className="flex justify-center items-center h-auto  w-full p-4 sm:p-6 md:p-8 lg:p-10 ">
       <div className="flex flex-col justify-center items-center min-h-screen max-w-7xl  space-y-20 border-t-2">
@@ -28,34 +28,7 @@ export default function NuestrasVisitas() {
 
           <Swiper visitas={ visitas }/>
           <SwiperMobile visitas={ visitas }/>
-
-          {/* <Visita
-            key={1}
-            date={"01.11.2021"}
-            title={"Visita El Espino"}
-            description={
-              "Hoy visitamos el espino con la ayuda de fundacion mano amiga"
-            }
-            image={"/jXev1.jpeg"}
-          />
-          <Visita
-            key={2}
-            date={"01.11.2021"}
-            title={"Visita El Espino"}
-            description={
-              "Hoy visitamos el espino con la ayuda de fundacion mano amiga"
-            }
-            image={"/jXev1.jpeg"}
-          />
-          <Visita
-            key={3}
-            date={"01.11.2021"}
-            title={"Visita El Espino"}
-            description={
-              "Hoy visitamos el espino con la ayuda de fundacion mano amiga"
-            }
-            image={"/jXev1.jpeg"}
-          /> */}
+        
         </div>
 
         <div className="flex justify-center items-center w-full">
