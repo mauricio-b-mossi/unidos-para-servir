@@ -9,16 +9,16 @@ import ItemsHero from "./ItemsHero";
 
 export default function Hero() {
   return (
-    <div  className=" h-screen w-full p-4 sm:p-6 md:p-8 lg:p-10">
+    <div className=" min-h-screen w-full p-4 sm:p-6 md:p-8 lg:p-10">
       {/* bg-main-blue text-white */}
       <Nav />
 
       {/* Grid */}
-      <div className="grid grid-cols-2 justify-center items-center h-full w-full">
+      <div className="grid grid-cols-2 justify-center items-center h-screen w-full">
         <TextHero />
         <ImageHero />
-        <ItemsHero />
       </div>
+      <ItemsHero />
     </div>
   );
 }

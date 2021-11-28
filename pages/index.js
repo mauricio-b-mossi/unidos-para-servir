@@ -9,7 +9,7 @@ import QuienesSomos from '../components/QuienesSomos'
 
 export default function Home() {
   return (
-    <div>
+    <div className='overflow-x-hidden'>
       <Hero />
       <Ayudar />
       <MisionYVision />
