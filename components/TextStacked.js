@@ -13,16 +13,16 @@ export default function TextStacked({title, description, heading}) {
         </div>
 
         {/* Description */}
-        <div className="max-w-md flex flex-col justify-center items-center text-center space-y-4 sm:text-md lg:text-lg">
+        <div className="flex flex-col max-w-md justify-center items-center text-center space-y-4 sm:text-md lg:text-lg">
           <p>{description}</p>
-          <div className="text-blue-500 font-semibold text-sm lg:text-lg text-center hover:text-red-500">
+          <div className="flex text-blue-500 font-semibold text-sm lg:text-lg text-center hover:text-red-500">
             + Dona Aqui
           </div>
         </div>
 
-        <div className="max-w-md flex flex-col justify-center items-center text-center space-y-4 sm:text-md lg:text-lg">
+        <div className="flex flex-col max-w-md justify-center items-center text-center space-y-4 sm:text-md lg:text-lg">
           <p>{description}</p>
-          <div className="text-blue-500 font-semibold text-sm lg:text-lg text-center hover:text-red-500">
+          <div className="flex text-blue-500 font-semibold text-sm lg:text-lg text-center hover:text-red-500">
             + Se Parte
           </div>
         </div>
