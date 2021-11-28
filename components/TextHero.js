@@ -1,6 +1,7 @@
 import React from "react";
 import ImageHero from "./ImageHero";
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function TextHero() {
   return (
@@ -25,7 +26,11 @@ export default function TextHero() {
           {/* Buttons */}
           <div className="flex justify-start items-center space-x-8">
             <div className="px-6 py-2 bg-white text-main-blue border-2 border-main-blue rounded-lg font-bold hover:bg-main-blue hover:text-white animate-pulse">
-              <h3>Donate now</h3>
+              <Link href="https://www.gofundme.com/f/we-need-help-for-san-luis-talpa-communities?utm_medium=copy_link&utm_source=customer&utm_campaign=p_lico+share-sheet">
+                <a>
+                  <h3>Donate now</h3>
+                </a>
+              </Link>
             </div>
             <div className="flex justify-center items-center space-x-2 font-semibold">
               <h3>Discover</h3> <span className="text-lg font-black ">↓</span>

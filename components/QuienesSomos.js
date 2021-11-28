@@ -4,7 +4,7 @@ import { Wrapper, Status } from "@googlemaps/react-wrapper";
 
 export default function QuienesSomos() {
   return (
-    <div className="flex justify-center items-center min-h-screen w-full p-4 sm:p-6 md:p-8 lg:p-10 ">
+    <div  className="flex justify-center items-center min-h-screen w-full p-4 sm:p-6 md:p-8 lg:p-10 ">
       <div className="flex flex-col justify-center items-center h-full max-w-7xl border-t-2 space-y-20">
         {/* Title */}
         <div className="flex flex-col justify-center items-center space-y-4">
@@ -26,8 +26,8 @@ export default function QuienesSomos() {
 
         <iframe
           className="md:hidden"
-          width="300"
-          height="300"
+          width="280"
+          height="280"
           id="gmap_canvas"
           src="https://maps.google.com/maps?q=comunidad%20asuncion&t=&z=17&ie=UTF8&iwloc=&output=embed"
           frameBorder="0"

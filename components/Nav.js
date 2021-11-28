@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Burger from "../public/menu.svg";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const variants = {
   open: {
@@ -41,17 +42,21 @@ export default function Nav() {
           </div>
         </div>
         {/* Links */}
-        <div className="hidden lg:flex space-x-12 font-semibold">
+        {/* <div className="hidden lg:flex space-x-12 font-semibold">
           <p>About Us</p>
           <p>Discover</p>
           <p>Whom we help</p>
-          <p>About Us</p>
-        </div>
+          <p>Quienes Somos</p>
+        </div> */}
       </div>
 
       {/* Donate button div */}
       <div className="hidden lg:block px-6 py-2 bg-white text-main-blue border-2 border-main-blue rounded-lg font-bold hover:bg-main-blue hover:text-white">
-        Donate now
+        <Link href="https://www.gofundme.com/f/we-need-help-for-san-luis-talpa-communities?utm_medium=copy_link&utm_source=customer&utm_campaign=p_lico+share-sheet">
+          <a>
+            <h3>Donate now</h3>
+          </a>
+        </Link>
       </div>
       <div className="block lg:hidden">
         <Image

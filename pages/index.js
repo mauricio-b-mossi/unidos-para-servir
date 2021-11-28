@@ -5,6 +5,8 @@ import Ayudar from '../components/Ayudar'
 import MisionYVision from '../components/MisionYVision'
 import NuestrasVisitas from '../components/NuestrasVisitas'
 import QuienesSomos from '../components/QuienesSomos'
+import Patrocinadores from '../components/Patrocinadores'
+import Fondos from '../components/Fondos'
 
 
 export default function Home() {
@@ -15,6 +17,8 @@ export default function Home() {
       <MisionYVision />
       <NuestrasVisitas />
       <QuienesSomos />
+      <Fondos />
+      <Patrocinadores />
       
     </div>
   );

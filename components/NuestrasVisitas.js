@@ -1,5 +1,7 @@
 import React from "react";
 import Image from "next/image";
+import Visita from "./Visita";
+import Link from 'next/link'
 
 export default function NuestrasVisitas() {
   return (
@@ -20,41 +22,39 @@ export default function NuestrasVisitas() {
 
         {/* Card Slider Of Visits */}
         <div className="grid grid-cols-3 justify-center items-center gap-16">
-          <s className="relative col-span-3 md:col-span-1">
-            <Image src="/jXev1.jpeg" width={600} height={600} />
-            <div className="flex flex-col justify-center items-center absolute inset-0 bg-main-blue opacity-0 transition ease-in-out hover:opacity-100 text-white font-bold text-2xl oldstyle-nums p-8 space-y-2">
-              <h3>01.11.2021</h3>
-              <h3>Visita El Espino</h3>
-              <p className="text-xs text-center">
-                Hoy visitamos el espino con la ayuda de fundacion mano amiga
-              </p>
-            </div>
-          </s>
-          <s className="relative col-span-3 md:col-span-1">
-            <Image src="/jXev1.jpeg" width={600} height={600} />
-            <div className="flex flex-col justify-center items-center absolute inset-0 bg-main-blue opacity-0 transition ease-in-out hover:opacity-100 text-white font-bold text-2xl oldstyle-nums p-8 space-y-2">
-              <h3>01.11.2021</h3>
-              <h3>Visita El Espino</h3>
-              <p className="text-xs text-center">
-                Hoy visitamos el espino con la ayuda de fundacion mano amiga
-              </p>
-            </div>
-          </s>
-          <s className="relative col-span-3 md:col-span-1">
-            <Image src="/jXev1.jpeg" width={600} height={600} />
-            <div className="flex flex-col justify-center items-center absolute inset-0 bg-main-blue opacity-0 transition ease-in-out hover:opacity-100 text-white font-bold text-2xl oldstyle-nums p-8 space-y-2">
-              <h3>01.11.2021</h3>
-              <h3>Visita El Espino</h3>
-              <p className="text-xs text-center">
-                Hoy visitamos el espino con la ayuda de fundacion mano amiga
-              </p>
-            </div>
-          </s>
+          <Visita
+            date={"01.11.2021"}
+            title={"Visita El Espino"}
+            description={
+              "Hoy visitamos el espino con la ayuda de fundacion mano amiga"
+            }
+            image={"/jXev1.jpeg"}
+          />
+          <Visita
+            date={"01.11.2021"}
+            title={"Visita El Espino"}
+            description={
+              "Hoy visitamos el espino con la ayuda de fundacion mano amiga"
+            }
+            image={"/jXev1.jpeg"}
+          />
+          <Visita
+            date={"01.11.2021"}
+            title={"Visita El Espino"}
+            description={
+              "Hoy visitamos el espino con la ayuda de fundacion mano amiga"
+            }
+            image={"/jXev1.jpeg"}
+          />
         </div>
 
         <div className="flex justify-center items-center w-full">
           <div className="px-6 py-2 bg-white text-main-blue border-2 border-main-blue rounded-lg font-bold hover:bg-main-blue hover:text-white">
-            <h3>Ver todas las visitas</h3>
+            <Link href="/visitas">
+              <a>
+                <h3>Ver todas las visitas</h3>
+              </a>
+            </Link>
           </div>
         </div>
       </div>
