@@ -2,6 +2,9 @@ import React from "react";
 import Image from "next/image";
 import Visita from "./Visita";
 import Link from 'next/link'
+import Swiper from './Swiper'
+import visitas from "../visitas.json";
+import SwiperMobile from './SwiperMobile'
 
 export default function NuestrasVisitas() {
   return (
@@ -22,7 +25,10 @@ export default function NuestrasVisitas() {
 
         {/* Card Slider Of Visits */}
         <div className="grid grid-cols-3 justify-center items-center gap-16">
-          <Visita
+          <Swiper visitas={ visitas }/>
+          <SwiperMobile visitas={ visitas }/>
+
+          {/* <Visita
             key={1}
             date={"01.11.2021"}
             title={"Visita El Espino"}
@@ -48,7 +54,7 @@ export default function NuestrasVisitas() {
               "Hoy visitamos el espino con la ayuda de fundacion mano amiga"
             }
             image={"/jXev1.jpeg"}
-          />
+          /> */}
         </div>
 
         <div className="flex justify-center items-center w-full">
