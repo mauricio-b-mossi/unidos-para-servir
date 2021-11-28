@@ -25,6 +25,7 @@ export default function NuestrasVisitas() {
 
         {/* Card Slider Of Visits */}
         <div className="grid grid-cols-3 justify-center items-center gap-16">
+
           <Swiper visitas={ visitas }/>
           <SwiperMobile visitas={ visitas }/>
 
