@@ -1,65 +1,52 @@
 export default {
-  name: 'post',
-  title: 'Post',
-  type: 'document',
+  name: "visitas",
+  title: "Visitas",
+  type: "document",
   fields: [
     {
-      name: 'title',
-      title: 'Title',
-      type: 'string',
+      name: "title",
+      title: "Title",
+      type: "string",
     },
     {
-      name: 'slug',
-      title: 'Slug',
-      type: 'slug',
+      name: "description",
+      title: "Descripcion Breve",
+      type: "text",
+      validation: (Rule) => Rule.required().min(5).max(25),
+    },
+    {
+      name: "slug",
+      title: "Slug",
+      type: "slug",
       options: {
-        source: 'title',
+        source: "title",
         maxLength: 96,
       },
     },
     {
-      name: 'author',
-      title: 'Author',
-      type: 'reference',
-      to: {type: 'author'},
-    },
-    {
-      name: 'mainImage',
-      title: 'Main image',
-      type: 'image',
+      name: "mainImage",
+      title: "Imagen",
+      type: "image",
       options: {
         hotspot: true,
       },
     },
     {
-      name: 'categories',
-      title: 'Categories',
-      type: 'array',
-      of: [{type: 'reference', to: {type: 'category'}}],
+      name: "publishedAt",
+      title: "Fecha",
+      type: "datetime",
     },
     {
-      name: 'publishedAt',
-      title: 'Published at',
-      type: 'datetime',
-    },
-    {
-      name: 'body',
-      title: 'Body',
-      type: 'blockContent',
+      name: "body",
+      title: "Texto",
+      type: "blockContent",
     },
   ],
 
   preview: {
     select: {
-      title: 'title',
-      author: 'author.name',
-      media: 'mainImage',
-    },
-    prepare(selection) {
-      const {author} = selection
-      return Object.assign({}, selection, {
-        subtitle: author && `by ${author}`,
-      })
+      title: "title",
+      media: "mainImage",
     },
   },
-}
+};
