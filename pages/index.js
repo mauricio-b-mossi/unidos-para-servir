@@ -11,7 +11,7 @@ import Fondos from '../components/Fondos'
 
 export default function Home() {
   return (
-    <div className='overflow-x-hidden'>
+    <div id='bg-blue' className='overflow-x-hidden'>
       <Hero />
       <Ayudar />
       <MisionYVision />

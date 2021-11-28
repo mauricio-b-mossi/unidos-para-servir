@@ -5,7 +5,7 @@ import Patrocinador from "./Patrocinador";
 
 export default function Patrocinadores() {
   return (
-    <div className="flex justify-center items-center min-h-screen  w-full p-4 sm:p-6 md:p-8 lg:p-10">
+    <div className="flex justify-center items-center h-auto  w-full p-4 sm:p-6 md:p-8 lg:p-10">
       <div className="flex flex-col justify-center items-center h-full max-w-7xl border-t-2 space-y-20">
         {/* Title */}
         <div className="flex flex-col justify-center items-center space-y-4">

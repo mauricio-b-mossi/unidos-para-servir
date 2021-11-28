@@ -1,32 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
-import Burger from "../public/menu.svg";
-import { motion } from "framer-motion";
-import Link from "next/link";
-
-const variants = {
-  open: {
-    x: 0,
-    transition: {
-      type: "tween",
-      default: { duration: 0.5 },
-    },
-  },
-  closed: { x: "+100%" },
-};
+import Donate from "./Donate";
 
 export default function Nav() {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const handleClick = () => {
-    setIsOpen((current) => !current);
-  };
-
-  const handleOuterClick = () => {
-    if (isOpen) {
-      setIsOpen((current) => !current);
-    }
-  };
 
   return (
     <div className="flex justify-between items-center w-full">
@@ -42,31 +18,17 @@ export default function Nav() {
           </div>
         </div>
         {/* Links */}
-        {/* <div className="hidden lg:flex space-x-12 font-semibold">
+        <div className="hidden lg:flex space-x-12 font-semibold">
           <p>About Us</p>
           <p>Discover</p>
           <p>Whom we help</p>
           <p>Quienes Somos</p>
-        </div> */}
+        </div>
       </div>
 
       {/* Donate button div */}
-      <div className="hidden lg:block px-6 py-2 bg-white text-main-blue border-2 border-main-blue rounded-lg font-bold hover:bg-main-blue hover:text-white">
-        <Link href="https://www.gofundme.com/f/we-need-help-for-san-luis-talpa-communities?utm_medium=copy_link&utm_source=customer&utm_campaign=p_lico+share-sheet">
-          <a>
-            <h3>Donate now</h3>
-          </a>
-        </Link>
-      </div>
-      <div className="block lg:hidden">
-        <Image
-          onClick={handleClick}
-          className="cursor-pointer"
-          src={Burger}
-          width={30}
-          height={30}
-        />
-      </div>
+      <Donate />
+   
     </div>
   );
 }
