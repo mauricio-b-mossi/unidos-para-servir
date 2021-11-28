@@ -19,8 +19,8 @@ export default function Patrocinadores({patrocinadores}) {
         {/* Card Slider Of Visits */}
         <div className="grid grid-cols-3 justify-center items-center gap-16">
           {patrocinadores &&
-            patrocinadores.map((patrocinador) => (
-              <Patrocinador patrocinador={patrocinador} />
+            patrocinadores.map((patrocinador, index) => (
+              <Patrocinador patrocinador={patrocinador} key={index} />
             ))}
         </div>
       </div>
