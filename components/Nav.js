@@ -24,12 +24,12 @@ export default function Nav() {
         </Link>
 
         {/* Links */}
-        <div className="hidden lg:flex space-x-12 font-semibold">
+        {/* <div className="hidden lg:flex space-x-12 font-semibold">
           <p>About Us</p>
           <p>Discover</p>
           <p>Whom we help</p>
           <p>Quienes Somos</p>
-        </div>
+        </div> */}
       </div>
 
       {/* Donate button div */}

@@ -11,8 +11,7 @@ import NuestrosFundadores from "../components/NuestrosFundadores";
 import { sanityClient } from "../sanity";
 
 export default function Home({ visitas, members, patrocinadores }) {
-  console.log(visitas);
-  console.log(`Members + ${members}`);
+
   return (
     <div id="bg-blue" className="overflow-x-hidden">
       <Hero />

@@ -15,10 +15,7 @@ import SwiperCore, { Pagination } from "swiper";
 SwiperCore.use([Pagination]);
 
 export default function App({ visitas }) {
-  console.log("====================================");
-  console.log(visitas);
-  console.log("====================================");
-  visitas.map((vi) => console.log(vi.title));
+  
   return (
     <div className="col-span-3 relative h-auto hidden lg:block">
       <Swiper
