@@ -23,12 +23,13 @@ export default function QuienesSomos() {
         </div>
 
         {/* Map */}
+
         <iframe
           className="md:hidden"
           width="300"
           height="300"
           id="gmap_canvas"
-          src="https://maps.google.com/maps?q=comunidad%20Asunci%C3%B3n&t=&z=13&ie=UTF8&iwloc=&output=embed"
+          src="https://maps.google.com/maps?q=comunidad%20asuncion&t=&z=17&ie=UTF8&iwloc=&output=embed"
           frameBorder="0"
           scrolling="no"
           marginHeight="0"
@@ -39,7 +40,7 @@ export default function QuienesSomos() {
           width="600"
           height="500"
           id="gmap_canvas"
-          src="https://maps.google.com/maps?q=comunidad%20Asunci%C3%B3n&t=&z=13&ie=UTF8&iwloc=&output=embed"
+          src="https://maps.google.com/maps?q=comunidad%20asuncion&t=&z=17&ie=UTF8&iwloc=&output=embed"
           frameBorder="0"
           scrolling="no"
           marginHeight="0"
