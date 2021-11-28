@@ -9,8 +9,8 @@ import blockContent from './blockContent'
 import visitas from './visitas'
 import member from './member'
 import sponsor from './sponsor'
-import Ayudar from './Ayudar'
-import QuienesSomos from './QuienesSomos'
+// import Ayudar from './Ayudar'
+// import QuienesSomos from './QuienesSomos'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -21,8 +21,8 @@ export default createSchema({
   types: schemaTypes.concat([
     // The following are document types which will appear
     // in the studio.
-    Ayudar,
-    QuienesSomos,
+    // Ayudar,
+    // QuienesSomos,
     visitas,
     member,
     sponsor,
