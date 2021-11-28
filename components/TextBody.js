@@ -14,7 +14,7 @@ export default function TextBody({title, description, heading}) {
         </div>
 
         {/* Description */}
-        <div className="max-w-md">
+        <div className="text-center sm:text-left max-w-md">
           <p>{description}</p>
         </div>
 

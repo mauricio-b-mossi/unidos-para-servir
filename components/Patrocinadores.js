@@ -11,7 +11,7 @@ export default function Patrocinadores() {
         <div className="flex flex-col justify-center items-center space-y-4">
           <div className="flex-col text-3xl lg:text-5xl font-serif font-semibold leading-snug pt-12">
             <h3 className="max-w-md lg:max-w-7xl text-center">
-              Nuestros colaboradores    :
+              Nuestros colaboradores:
             </h3>
           </div>
         </div>
