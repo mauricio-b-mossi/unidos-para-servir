@@ -31,7 +31,7 @@ export default function NuestrasVisitas({ visitas }) {
         
         </div>
 
-        <div className="flex justify-center items-center w-full">
+        {/* <s className="flex justify-center items-center w-full">
           <div className="px-6 py-2 bg-white text-main-blue border-2 border-main-blue rounded-lg font-bold hover:bg-main-blue hover:text-white">
             <Link href="/visitas">
               <a>
@@ -39,7 +39,7 @@ export default function NuestrasVisitas({ visitas }) {
               </a>
             </Link>
           </div>
-        </div>
+        </s> */}
       </div>
     </div>
   );
