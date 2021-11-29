@@ -7,7 +7,7 @@ import TextHero from "./TextHero";
 import ImageHero from "./ImageHero";
 import ItemsHero from "./ItemsHero";
 
-export default function Hero({link, home}) {
+export default function Hero({home}) {
   return (
     <div className=" min-h-screen w-full p-4 sm:p-6 md:p-8 lg:p-10">
       <Nav/>
