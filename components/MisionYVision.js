@@ -17,7 +17,7 @@ export default function MisionYVision({ misionYvision }) {
           description={body}
         />
         <div className="flex flex-col justify-center items-center col-span-2 lg:col-span-1">
-          <Image src={mainImage.asset.url} width={600} height={450} />
+          <Image src={mainImage.asset.url} width={600} height={600} />
         </div>
       </div>
     </div>
