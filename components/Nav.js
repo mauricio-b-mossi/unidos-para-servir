@@ -4,6 +4,8 @@ import Donate from "./Donate";
 import Link from "next/link";
 
 export default function Nav() {
+  
+
 
   return (
     <div className="flex justify-between items-center w-full">
@@ -33,7 +35,7 @@ export default function Nav() {
       </div>
 
       {/* Donate button div */}
-      <Donate />
+      <Donate/>
     </div>
   );
 }

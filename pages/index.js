@@ -22,6 +22,8 @@ export default function Home({
   visitas,
   patrocinadores,
 }) {
+
+  
   return (
     <div id="bg-blue" className="overflow-x-hidden">
       <Hero home={home} />
