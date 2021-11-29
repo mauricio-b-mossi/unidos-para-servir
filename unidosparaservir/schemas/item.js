@@ -1,6 +1,6 @@
 export default {
-  name: "home",
-  title: "Home",
+  name: "item",
+  title: "Items",
   type: "document",
   fields: [
     {
@@ -12,27 +12,27 @@ export default {
       name: "description",
       title: "Descripción",
       type: "text",
+      validation: (Rule) => Rule.required().min(5).max(75),
     },
     {
-      name: "mainImage",
-      title: "Imagen",
+      name: "order",
+      title: "Order",
+      description: "Number in which member appears in the website",
+      type: "number",
+    },
+    {
+      name: "image",
+      title: "Image",
       type: "image",
       options: {
         hotspot: true,
       },
     },
-    {
-      name: "items",
-      title: "Items",
-      type: "array",
-      of: [{ type: "reference", to: { type: "item" } }],
-    },
   ],
-
   preview: {
     select: {
       title: "title",
-      media: "mainImage",
+      media: "image",
     },
   },
 };

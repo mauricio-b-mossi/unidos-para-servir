@@ -7,7 +7,7 @@ import Donate from "./Donate";
 export default function TextHero({ home }) {
 
   
-  const {  title, description } = home;
+  const {  title, description, mainImage } = home;
   
   return (
     <div className="lg:flex lg:justify-center lg:items-center col-span-2 lg:col-span-1">
@@ -15,14 +15,12 @@ export default function TextHero({ home }) {
         <div className="flex-col justify-center items-center space-y-8 z-10">
           {/* Title */}
           <h3 className="flex-col text-3xl lg:text-5xl font-serif font-semibold lg:leading-snug">
-              {/* A world where no child&apos;s life is torn apart by war. */}
               {title}
           </h3>
 
           {/* Description */}
             <p className="text-lg font-medium">
-              {/* Every five seconds one child dies in Africa due to malnutrition
-              and related diseases, and you can help! */}
+         
               {description}
             </p>
 
@@ -35,7 +33,7 @@ export default function TextHero({ home }) {
           </div>
         </div>
         <div className="flex flex-col justify-center items-center absolute opacity-50 lg:hidden">
-          <Image src="/ninossv2.png" width={1356} height={720} />
+          <Image src={mainImage.asset.url} width={1356} height={720} />
         </div>
       </div>
     </div>

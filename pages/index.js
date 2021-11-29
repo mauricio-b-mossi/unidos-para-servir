@@ -23,6 +23,8 @@ export default function Home({
   patrocinadores,
 }) {
 
+  console.log(home.items);
+
   
   return (
     <div id="bg-blue" className="overflow-x-hidden">
@@ -48,7 +50,7 @@ export default function Home({
 // }
 export const getServerSideProps = async ({ params }) => {
   const homeQuery = `*[_type == "home"][0]{
- title, description
+ title, description, mainImage{asset->{_id, url}}, "items": items[]->{title, description, image{asset->{url}}},
   }`;
   const ayudaQuery = `*[_type == "ayudar"][0]{
  title, dona, linkdona, parte, linkparte, mainImage{asset->{_id, url}}

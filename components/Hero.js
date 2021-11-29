@@ -7,17 +7,20 @@ import TextHero from "./TextHero";
 import ImageHero from "./ImageHero";
 import ItemsHero from "./ItemsHero";
 
-export default function Hero({home}) {
+export default function Hero({ home }) {
+  
+  const { title, description, mainImage, items } = home
+  
   return (
     <div className=" min-h-screen w-full p-4 sm:p-6 md:p-8 lg:p-10">
-      <Nav/>
+      <Nav />
 
       {/* Grid */}
       <div className="grid grid-cols-2 justify-center items-center h-screen w-full">
-        <TextHero home={ home }/>
+        <TextHero home={{ title, description, mainImage }} />
         <ImageHero />
       </div>
-      <ItemsHero />
+      <ItemsHero items={items} />
     </div>
   );
 }
