@@ -13,7 +13,7 @@ export default function Patrocinadores({ nuestrosPatrocinadores, patrocinadores 
         {/* Title */}
         <div className="flex flex-col justify-center items-center space-y-4">
           <div className="flex-col text-3xl lg:text-5xl font-serif font-semibold leading-snug pt-12">
-            <h3 className="flex max-w-xl text-center">{title}</h3>
+            <h3 className="flex max-w-7xl text-center">{title}</h3>
           </div>
           <div className="flex max-w-md text-center">
             <p>{description}</p>
