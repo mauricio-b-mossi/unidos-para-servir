@@ -8,7 +8,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@googlemaps/react-wrapper": "^1.1.15",
     "@sanity/block-content-to-react": "^3.0.0",
     "@sanity/client": "^2.21.10",
     "@sanity/image-url": "^1.0.1",

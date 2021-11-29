@@ -1,6 +1,6 @@
 export default {
-  name: "quienesSomos",
-  title: "¿Quienes somos?",
+  name: "nuestrosPatrocinadores",
+  title: "Nuestros Patrocinadores",
   type: "document",
   fields: [
     {
@@ -10,7 +10,7 @@ export default {
     },
     {
       name: "description",
-      title: "Descripción",
+      title: "Descripción ",
       type: "text",
     },
   ],

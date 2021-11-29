@@ -1,23 +1,21 @@
 import React from "react";
 import Image from "next/image";
-import { Wrapper, Status } from "@googlemaps/react-wrapper";
 
-export default function QuienesSomos() {
+export default function QuienesSomos({ quienesSomos }) {
+
+  const { title, description } = quienesSomos
+  
   return (
     <div className="flex justify-center items-center h-auto w-full p-4 sm:p-6 md:p-8 lg:p-10 ">
       <div className="flex flex-col justify-center items-center min-h-screen max-w-7xl border-t-2 space-y-20">
         {/* Title */}
         <div className="flex flex-col justify-center items-center space-y-4">
           <div className="flex-col text-3xl lg:text-5xl font-serif font-semibold leading-snug pt-12">
-            <h3 className="max-w-md text-center">¿Quienes somos?</h3>
+            <h3 className="max-w-md text-center">{title}</h3>
           </div>
           <div className="max-w-xl text-center">
             <p>
-              Somos una iniciativa de jóvenes sin fines de lucro que busca
-              apoyar, por medio de víveres y convivo, a la comunidad El Espino,
-              localizada en Usulután. Contamos con la ayuda de la fundación Una
-              Mano Amiga, la cual provee un espacio para que puedas donar y así
-              ayudarnos a cambiar la vida de esta comunidad.
+              {description}
             </p>
           </div>
         </div>

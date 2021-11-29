@@ -4,7 +4,11 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Donate from "./Donate";
 
-export default function TextHero() {
+export default function TextHero({ home }) {
+
+  
+  const {  title, description } = home;
+  
   return (
     <div className="lg:flex lg:justify-center lg:items-center col-span-2 lg:col-span-1">
       <div className="flex justify-center items-center  relative lg:block">
@@ -13,15 +17,17 @@ export default function TextHero() {
           {/* Title */}
           <div className="flex-col text-3xl lg:text-5xl font-serif font-semibold lg:leading-snug">
             <h3 className="max-w-md">
-              A world where no child&apos;s life is torn apart by war.
+              {/* A world where no child&apos;s life is torn apart by war. */}
+              {title}
             </h3>
           </div>
 
           {/* Description */}
           <div className="max-w-md">
             <p>
-              Every five seconds one child dies in Africa due to malnutrition
-              and related diseases, and you can help!
+              {/* Every five seconds one child dies in Africa due to malnutrition
+              and related diseases, and you can help! */}
+              {description}
             </p>
           </div>
 

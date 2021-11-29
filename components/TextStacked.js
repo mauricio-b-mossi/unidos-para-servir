@@ -1,6 +1,14 @@
 import React from "react";
+import Link from "next/link";
 
-export default function TextStacked({title, description, heading}) {
+export default function TextStacked({
+  title,
+  dona,
+  linkdona,
+  parte,
+  linkparte,
+  heading,
+}) {
   return (
     <div className="flex justify-center items-center col-span-2 lg:col-span-1">
       <div className="relative flex-col justify-center items-center space-y-8">
@@ -14,16 +22,20 @@ export default function TextStacked({title, description, heading}) {
 
         {/* Description */}
         <div className="flex flex-col max-w-md justify-center items-center text-center space-y-4 sm:text-md lg:text-lg">
-          <p>{description}</p>
+          <p>{dona}</p>
           <div className="flex text-blue-500 font-semibold text-sm lg:text-lg text-center hover:text-red-500">
-            + Dona Aqui
+            <Link href={linkdona}>
+              <a>+ Dona Aqui</a>
+            </Link>
           </div>
         </div>
 
         <div className="flex flex-col max-w-md justify-center items-center text-center space-y-4 sm:text-md lg:text-lg">
-          <p>{description}</p>
+          <p>{parte}</p>
           <div className="flex text-blue-500 font-semibold text-sm lg:text-lg text-center hover:text-red-500">
-            + Se Parte
+            <Link href={linkparte}>
+              <a>+ Se Parte</a>
+            </Link>
           </div>
         </div>
       </div>

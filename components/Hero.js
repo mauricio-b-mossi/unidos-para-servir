@@ -7,15 +7,14 @@ import TextHero from "./TextHero";
 import ImageHero from "./ImageHero";
 import ItemsHero from "./ItemsHero";
 
-export default function Hero() {
+export default function Hero({home}) {
   return (
     <div className=" min-h-screen w-full p-4 sm:p-6 md:p-8 lg:p-10">
-      {/* bg-main-blue text-white */}
       <Nav />
 
       {/* Grid */}
       <div className="grid grid-cols-2 justify-center items-center h-screen w-full">
-        <TextHero />
+        <TextHero home={ home }/>
         <ImageHero />
       </div>
       <ItemsHero />

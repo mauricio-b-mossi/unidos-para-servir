@@ -1,6 +1,6 @@
 export default {
-  name: "quienesSomos",
-  title: "¿Quienes somos?",
+  name: "nuestrasVisitas",
+  title: "Nuestras Visitas",
   type: "document",
   fields: [
     {

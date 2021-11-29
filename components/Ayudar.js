@@ -3,7 +3,10 @@ import Image from 'next/image'
 import TextBody from "./TextBody";
 import TextStacked from './TextStacked';
 
-export default function Ayudar() {
+export default function Ayudar({ ayuda }) {
+  
+  const { title, dona, linkdona, parte, linkparte, mainImage } = ayuda
+  
     return (
       <div className="flex justify-center items-center h-auto w-full p-4 sm:p-6 md:p-8 lg:p-10  ">
         <div className="flex flex-col lg:grid lg:grid-cols-2 justify-center items-center min-h-screen max-w-7xl  gap-4 pt-12 border-t-2">
@@ -15,21 +18,22 @@ export default function Ayudar() {
               </div>
               {/* Title */}
               <div className="flex-col text-2xl md:text-3xl 2xl:text-5xl font-serif font-semibold lg:leading-snug">
-                <h3 className="max-w-md">¿Como nos puedes ayudar?</h3>
+                <h3 className="max-w-md">{ title }</h3>
               </div>
             </div>
 
             <div className="flex flex-col justify-center items-center pt-4">
-              <Image src="/jXe.jpeg" width={600} height={450} />
+              <Image src={mainImage.asset.url} width={600} height={450} />
             </div>
           </div>
           {/* Text */}
           <TextStacked
             heading={"NECESITAMOS TU AYUDA"}
-            title={"¿Como nos puedes ayudar?"}
-            description={
-              "Puedes darnos tu tiempo y habilidades registrándote como voluntario. O puedes ayudar en esta gran labor donando."
-            }
+            title={title}
+            dona={dona}
+            linkdona={linkdona }
+            parte={parte}
+            linkparte={linkparte}
           />
         </div>
       </div>

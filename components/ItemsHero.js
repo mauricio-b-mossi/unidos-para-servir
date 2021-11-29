@@ -5,7 +5,7 @@ export default function ItemsHero() {
     return (
       <div className="hidden lg:flex justify-center items-center h-full w-full col-span-2">
         <div className="flex max-w-7xl justify-between lg:justify-center items-center gap-16 ">
-          <div className="flex flex-col space-y-4">
+          <div className="flex flex-col space-y-4 justify-center items-center">
             <div className="h-12 w-12 lg:h-auto lg:w-auto ">
               <Image
                 className="rounded-full"
@@ -22,7 +22,7 @@ export default function ItemsHero() {
               nisi.
             </p>
           </div>
-          <div className="flex flex-col space-y-4">
+          <div className="flex flex-col space-y-4 justify-center items-center">
             <div className="h-12 w-12 lg:h-auto lg:w-auto ">
               <Image
                 className="rounded-full"
@@ -39,7 +39,7 @@ export default function ItemsHero() {
               nisi.
             </p>
           </div>
-          <div className="flex flex-col space-y-4">
+          <div className="flex flex-col space-y-4 justify-center items-center">
             <div className="h-12 w-12 lg:h-auto lg:w-auto ">
               <Image
                 className="rounded-full"
@@ -56,7 +56,7 @@ export default function ItemsHero() {
               nisi.
             </p>
           </div>
-          <div className="flex flex-col space-y-4">
+          <div className="flex flex-col space-y-4 justify-center items-center">
             <div className="h-12 w-12 lg:h-auto lg:w-auto ">
               <Image
                 className="rounded-full"
@@ -73,7 +73,7 @@ export default function ItemsHero() {
               nisi.
             </p>
           </div>
-          <div className="flex flex-col space-y-4">
+          <div className="flex flex-col space-y-4 justify-center items-center">
             <div className="h-12 w-12 lg:h-auto lg:w-auto ">
               <Image
                 className="rounded-full"
