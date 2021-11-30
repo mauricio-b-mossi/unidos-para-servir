@@ -28,22 +28,22 @@ export default function Home({
   
 
   return (
-      <div id="bg-blue" className="overflow-x-hidden">
-        <Hero home={home} />
-        <Ayudar ayuda={ayuda} />
-        <MisionYVision misionYvision={misionYvision} />
-        <NuestrasVisitas nuestrasVisitas={nuestrasVisitas} visitas={visitas} />
-        <QuienesSomos quienesSomos={quienesSomos} />
-        <NuestrosFundadores
-          nuestrosFundadores={nuestrosFundadores}
-          members={members}
-        />
-        {/* <Fondos /> */}
-        <Patrocinadores
-          nuestrosPatrocinadores={nuestrosPatrocinadores}
-          patrocinadores={patrocinadores}
-        />
-      </div>
+    <div id="bg-blue" className="overflow-x-hidden">
+      <Hero home={home} />
+      <Ayudar ayuda={ayuda} />
+      <MisionYVision misionYvision={misionYvision} />
+      {/* <Fondos /> */}
+      <NuestrasVisitas nuestrasVisitas={nuestrasVisitas} visitas={visitas} />
+      <QuienesSomos quienesSomos={quienesSomos} />
+      <NuestrosFundadores
+        nuestrosFundadores={nuestrosFundadores}
+        members={members}
+      />
+      <Patrocinadores
+        nuestrosPatrocinadores={nuestrosPatrocinadores}
+        patrocinadores={patrocinadores}
+      />
+    </div>
   );
 }
 
