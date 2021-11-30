@@ -7,8 +7,8 @@ export default function ItemsHeroExp({ items, link }) {
   
   
     return (
-      <div className="hidden sm:flex justify-center items-center h-full w-full col-span-2">
-        <div className="flex max-w-7xl justify-between lg:justify-center items-center space-x-4 md:gap-4 lg:gap-16 ">
+      <div className="flex justify-center items-center h-full w-full col-span-2">
+        <div className="flex w-96 lg:w-auto max-w-7xl justify-center items-start space-x-2 sm:space-x-4 md:gap-4 lg:gap-16 ">
           {items &&
             items.map((item, index) => (
               <ItemExp item={item} key={index} />

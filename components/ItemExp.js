@@ -9,7 +9,7 @@ export default function ItemExp({ index, item }) {
       <Link href={item.link}>
         <a className="transition duration-150 ease-in-out transform hover:-translate-y-2 block border-2 border-g border-gradient-to-tr from-yellow-400 to-fuchsia-600 p-1 rounded-full ">
           <div className="bg-white p-1 rounded-full">
-            <div className="p-4 md:p-8 rounded-full">
+            <div className="p-4 md:p-6 lg:p-8 rounded-full">
               <Image
                 // h-12 w-12 md:h-12 md:w-12
                 className="rounded-full "
@@ -23,10 +23,10 @@ export default function ItemExp({ index, item }) {
         </a>
       </Link>
 
-      <h3 className="font-semibold font-serif text-main-blue text-xs sm:text-sm lg:text-md">
-        {item.title}
+      <h3 className="font-thin sm:font-semibold font-serif text-main-blue leading-tight text-xs  sm:text-sm lg:text-md">
+        {item.title.length > 8 ? item.title.substring(0, 8) + '...' : item.title}
       </h3>
-      <p className="hidden lg:block text-xs lg:leading-5 lg:text-sm">
+      <p className="hidden lg:block text-[5px]  lg:leading-5 lg:text-sm">
         {item.description}
       </p>
     </div>
