@@ -15,7 +15,7 @@ export default function Nav() {
         <Link href="/">
           <a>
             <div className="flex justify-center items-center space-x-4">
-              <Image src="/dummylogo.png" width={50} height={50} />
+              <Image src="/logocircleups.png" width={50} height={50} />
               <div className="flex-col font-bold uppercase leading-4 ">
                 <h4>unidos</h4>
                 <h4>para</h4>
