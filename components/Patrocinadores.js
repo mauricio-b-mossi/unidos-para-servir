@@ -21,7 +21,7 @@ export default function Patrocinadores({ nuestrosPatrocinadores, patrocinadores 
         </div>
 
         {/* Card Slider Of Visits */}
-        <div className="grid grid-cols-3 justify-center items-center gap-16">
+        <div className="flex flex-wrap justify-center items-center gap-16">
           {patrocinadores &&
             patrocinadores.map((patrocinador, index) => (
               <Patrocinador patrocinador={patrocinador} key={index} />

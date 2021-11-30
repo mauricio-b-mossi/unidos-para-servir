@@ -9,16 +9,16 @@ export default function Patrocinador({patrocinador}) {
   // console.log(link);
 
   return (
-    <div className="col-span-3 md:col-span-1 flex flex-col justify-center items-center text-center">
+    <div className="flex flex-col justify-center items-center text-center">
       <Link href={link}>
         <a>
-          <div className="w-40 h-40 md:w-52 md:h-52 relative">
+          <div className="relative">
             <Image
               className="cursor-pointer "
               src={image ? image.asset.url : '/logocircleups.png'}
               alt=""
-              width="150"
-              height="150"
+              width="100"
+              height="100"
             />
             {/* <h3 className="font-semibold">{name}</h3> */}
           </div>

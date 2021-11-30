@@ -15,6 +15,7 @@ export default function Home({
   home,
   ayuda,
   misionYvision,
+  fondos,
   nuestrasVisitas,
   quienesSomos,
   nuestrosFundadores,
@@ -24,22 +25,28 @@ export default function Home({
   patrocinadores,
 }) {
   return (
-    <div className="overflow-x-hidden">
-      <Hero home={home} />
-      <Ayudar ayuda={ayuda} />
-      <MisionYVision misionYvision={misionYvision} />
-      <Fondos />
-      <NuestrasVisitas nuestrasVisitas={nuestrasVisitas} visitas={visitas} />
-      <QuienesSomos quienesSomos={quienesSomos} />
-      <NuestrosFundadores
-        nuestrosFundadores={nuestrosFundadores}
-        members={members}
-      />
-      <Patrocinadores
-        nuestrosPatrocinadores={nuestrosPatrocinadores}
-        patrocinadores={patrocinadores}
-      />
-    </div>
+    <>
+      <Head>
+        <title>Unidos Para Servir</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
+      <div className="overflow-x-hidden">
+        <Hero home={home} />
+        <Ayudar ayuda={ayuda} />
+        <MisionYVision misionYvision={misionYvision} />
+        <Fondos items={ fondos }/>
+        <NuestrasVisitas nuestrasVisitas={nuestrasVisitas} visitas={visitas} />
+        <QuienesSomos quienesSomos={quienesSomos} />
+        <NuestrosFundadores
+          nuestrosFundadores={nuestrosFundadores}
+          members={members}
+        />
+        <Patrocinadores
+          nuestrosPatrocinadores={nuestrosPatrocinadores}
+          patrocinadores={patrocinadores}
+        />
+      </div>
+    </>
   );
 }
 
@@ -52,6 +59,9 @@ export const getServerSideProps = async ({ params }) => {
   }`;
   const misionYvisionQuery = `*[_type == "misionYvision"][0]{
  quote, body, mainImage{asset->{_id, url}}
+  }`;
+  const fondosQuery = `*[_type == "fondos"]{
+ amount, description, image{asset->{_id, url}}
   }`;
   const nuestrasVisitasQuery = `*[_type == "nuestrasVisitas"][0]{
  title, description
@@ -79,6 +89,7 @@ export const getServerSideProps = async ({ params }) => {
   const home = await sanityClient.fetch(homeQuery);
   const ayuda = await sanityClient.fetch(ayudaQuery);
   const misionYvision = await sanityClient.fetch(misionYvisionQuery);
+  const fondos = await sanityClient.fetch(fondosQuery);
   const nuestrasVisitas = await sanityClient.fetch(nuestrasVisitasQuery);
   const quienesSomos = await sanityClient.fetch(quienesSomosQuery);
   const nuestrosFundadores = await sanityClient.fetch(nuestrosFundadoresQuery);
@@ -94,6 +105,7 @@ export const getServerSideProps = async ({ params }) => {
       home,
       ayuda,
       misionYvision,
+      fondos,
       nuestrasVisitas,
       quienesSomos,
       nuestrosFundadores,
