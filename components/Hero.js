@@ -9,7 +9,9 @@ import ItemsHero from "./ItemsHero";
 
 export default function Hero({ home }) {
   
-  const { title, description, mainImage, items } = home
+  const { title, description, mainImage, items } = home;
+
+
   
   return (
     <div className=" min-h-screen w-full p-4 sm:p-6 md:p-8 lg:p-10">
@@ -18,7 +20,7 @@ export default function Hero({ home }) {
       {/* Grid */}
       <div className="grid grid-cols-2 justify-center items-center h-screen w-full">
         <TextHero home={{ title, description, mainImage }} />
-        <ImageHero />
+        <ImageHero image={ mainImage }/>
       </div>
       <ItemsHero items={items} />
     </div>

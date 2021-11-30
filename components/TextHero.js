@@ -26,7 +26,7 @@ export default function TextHero({ home }) {
 
           {/* Buttons */}
           <div className="flex justify-start items-center space-x-8">
-            <Donate />
+            <Donate/>
             <div className="flex justify-center items-center space-x-2 font-semibold">
               <h3>Discover</h3> <span className="text-lg font-black ">↓</span>
             </div>

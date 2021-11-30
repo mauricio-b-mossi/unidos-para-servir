@@ -9,6 +9,7 @@ import Patrocinadores from "../components/Patrocinadores";
 import Fondos from "../components/Fondos";
 import NuestrosFundadores from "../components/NuestrosFundadores";
 import { sanityClient } from "../sanity";
+import { createContext } from "react";
 
 export default function Home({
   home,
@@ -23,34 +24,32 @@ export default function Home({
   patrocinadores,
 }) {
 
-  console.log(home.items);
 
   
+
   return (
-    <div id="bg-blue" className="overflow-x-hidden">
-      <Hero home={home} />
-      <Ayudar ayuda={ayuda} />
-      <MisionYVision misionYvision={misionYvision} />
-      <NuestrasVisitas nuestrasVisitas={nuestrasVisitas} visitas={visitas} />
-      <QuienesSomos quienesSomos={quienesSomos} />
-      <NuestrosFundadores
-        nuestrosFundadores={nuestrosFundadores}
-        members={members}
-      />
-      {/* <Fondos /> */}
-      <Patrocinadores
-        nuestrosPatrocinadores={nuestrosPatrocinadores}
-        patrocinadores={patrocinadores}
-      />
-    </div>
+      <div id="bg-blue" className="overflow-x-hidden">
+        <Hero home={home} />
+        <Ayudar ayuda={ayuda} />
+        <MisionYVision misionYvision={misionYvision} />
+        <NuestrasVisitas nuestrasVisitas={nuestrasVisitas} visitas={visitas} />
+        <QuienesSomos quienesSomos={quienesSomos} />
+        <NuestrosFundadores
+          nuestrosFundadores={nuestrosFundadores}
+          members={members}
+        />
+        {/* <Fondos /> */}
+        <Patrocinadores
+          nuestrosPatrocinadores={nuestrosPatrocinadores}
+          patrocinadores={patrocinadores}
+        />
+      </div>
   );
 }
 
-// export const getServerSideProps = async ({ params }) => {
-// }
 export const getServerSideProps = async ({ params }) => {
   const homeQuery = `*[_type == "home"][0]{
- title, description, mainImage{asset->{_id, url}}, "items": items[]->{title, description, image{asset->{url}}},
+ title, description, mainImage{asset->{_id, url}}, "items": items[]->{title, description, image{asset->{url}}, link}, 
   }`;
   const ayudaQuery = `*[_type == "ayudar"][0]{
  title, dona, linkdona, parte, linkparte, mainImage{asset->{_id, url}}

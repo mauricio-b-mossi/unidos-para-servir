@@ -28,6 +28,11 @@ export default {
         hotspot: true,
       },
     },
+    {
+      title: "Link",
+      name: "link",
+      type: "url",
+    },
   ],
   preview: {
     select: {
