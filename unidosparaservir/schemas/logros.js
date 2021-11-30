@@ -15,8 +15,8 @@ export default {
       type: "string",
       options: {
         list: [
-          { title: "Dinero", value: "true" },
-          { title: "Numero", value: "false" },
+          { title: "Dinero", value: true },
+          { title: "Numero", value: false },
         ],
         layout: "radio",
       },

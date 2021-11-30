@@ -61,7 +61,7 @@ export const getServerSideProps = async ({ params }) => {
  quote, body, mainImage{asset->{_id, url}}
   }`;
   const fondosQuery = `*[_type == "fondos"]{
- amount, description, image{asset->{_id, url}}
+ amount, tipo, description, image{asset->{_id, url}}
   }`;
   const nuestrasVisitasQuery = `*[_type == "nuestrasVisitas"][0]{
  title, description
