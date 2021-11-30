@@ -9,12 +9,12 @@ export default function TextBody({title, description, heading}) {
         </div>
         {/* Title */}
 
-        <div className="flex-col text-3xl 2xl:text-5xl font-serif font-semibold lg:leading-snug">
+        <div className="flex-col text-2xl sm:text-3xl 2xl:text-5xl font-serif font-semibold lg:leading-snug">
           <h3 className="max-w-md">{title}</h3>
         </div>
 
         {/* Description */}
-        <div className="text-center sm:text-left max-w-md">
+        <div className="text-left max-w-md">
           <p>{description}</p>
         </div>
 
