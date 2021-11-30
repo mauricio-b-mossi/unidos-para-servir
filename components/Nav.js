@@ -35,7 +35,7 @@ export default function Nav() {
       </div>
 
       {/* Donate button div */}
-      <Donate/>
+      <Donate />
     </div>
   );
 }

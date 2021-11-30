@@ -30,7 +30,7 @@ const { title, description } = nuestrasVisitas
           <SwiperMobile visitas={visitas} />
         </div>
 
-        <div className="flex justify-center items-center w-full">
+        {/* <s className="flex justify-center items-center w-full">
           <div className="px-6 py-2 bg-white text-main-blue border-2 border-main-blue rounded-lg font-bold hover:bg-main-blue hover:text-white">
             <Link href="">
               <a>
@@ -38,7 +38,7 @@ const { title, description } = nuestrasVisitas
               </a>
             </Link>
           </div>
-        </div>
+        </s> */}
       </div>
     </div>
   );
