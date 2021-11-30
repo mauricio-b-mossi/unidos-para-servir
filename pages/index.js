@@ -23,12 +23,8 @@ export default function Home({
   visitas,
   patrocinadores,
 }) {
-
-
-  
-
   return (
-    <div id="bg-blue" className="overflow-x-hidden">
+    <div className="overflow-x-hidden">
       <Hero home={home} />
       <Ayudar ayuda={ayuda} />
       <MisionYVision misionYvision={misionYvision} />

@@ -9,7 +9,7 @@ export default function Donate() {
       <div className="px-3 py-1 text-sm sm:text-base lg:px-6 lg:py-2 bg-white text-main-blue border-2 border-main-blue rounded-lg font-bold hover:bg-main-blue hover:text-white">
         <Link href=''>
           <a>
-            <h3>Donate now</h3>
+            <h3>Dona Ya</h3>
           </a>
         </Link>
       </div>
