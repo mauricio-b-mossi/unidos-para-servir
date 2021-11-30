@@ -32,7 +32,7 @@ const { title, description } = nuestrasVisitas
 
         <div className="flex justify-center items-center w-full">
           <div className="px-6 py-2 bg-white text-main-blue border-2 border-main-blue rounded-lg font-bold hover:bg-main-blue hover:text-white">
-            <Link href="/visitas">
+            <Link href="">
               <a>
                 <h3>Ver todas las visitas</h3>
               </a>
