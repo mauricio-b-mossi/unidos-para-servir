@@ -6,6 +6,7 @@ import Nav from "./Nav";
 import TextHero from "./TextHero";
 import ImageHero from "./ImageHero";
 import ItemsHero from "./ItemsHero";
+import ItemsHeroExp from "./ItemsHeroExp";
 
 export default function Hero({ home }) {
   
@@ -22,7 +23,7 @@ export default function Hero({ home }) {
         <TextHero home={{ title, description, mainImage }} />
         <ImageHero image={ mainImage }/>
       </div>
-      <ItemsHero items={items} />
+      <ItemsHeroExp items={items} />
     </div>
   );
 }
