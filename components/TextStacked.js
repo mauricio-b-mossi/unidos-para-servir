@@ -24,7 +24,13 @@ export default function TextStacked({
         <div className="flex flex-col max-w-md justify-center items-center text-center space-y-4 sm:text-md lg:text-lg">
           <p>{dona}</p>
           <div className="flex text-blue-500 font-semibold text-sm lg:text-lg text-center hover:text-red-500">
-            <Link href={linkdona}>
+            <Link
+              href={
+                linkdona
+                  ? linkdona
+                  : "https://www.instagram.com/unidosparaservir.sv/"
+              }
+            >
               <a>+ Dona Aqui</a>
             </Link>
           </div>
@@ -33,7 +39,13 @@ export default function TextStacked({
         <div className="flex flex-col max-w-md justify-center items-center text-center space-y-4 sm:text-md lg:text-lg">
           <p>{parte}</p>
           <div className="flex text-blue-500 font-semibold text-sm lg:text-lg text-center hover:text-red-500">
-            <Link href={linkparte}>
+            <Link
+              href={
+                linkparte
+                  ? linkparte
+                  : "https://www.instagram.com/unidosparaservir.sv/"
+              }
+            >
               <a>+ Se Parte</a>
             </Link>
           </div>

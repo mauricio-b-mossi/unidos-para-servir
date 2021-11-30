@@ -28,7 +28,7 @@ export default function Home({
       <Hero home={home} />
       <Ayudar ayuda={ayuda} />
       <MisionYVision misionYvision={misionYvision} />
-      {/* <Fondos /> */}
+      <Fondos />
       <NuestrasVisitas nuestrasVisitas={nuestrasVisitas} visitas={visitas} />
       <QuienesSomos quienesSomos={quienesSomos} />
       <NuestrosFundadores
