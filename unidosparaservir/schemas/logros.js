@@ -9,17 +9,11 @@ export default {
       type: "number",
     },
     {
+      title: "Dinero",
+      description:
+        "Si es dinero marcar el boton de dinero, si se trata de un numero no.",
       name: "tipo",
-        title: "Tipo de monto",
-      description: "Si es dinero marcar el boton de dinero, si se trata de un numero marcan numero.",
-      type: "string",
-      options: {
-        list: [
-          { title: "Dinero", value: true },
-          { title: "Numero", value: false },
-        ],
-        layout: "radio",
-      },
+      type: "boolean",
     },
     {
       name: "description",

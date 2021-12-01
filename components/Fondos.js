@@ -4,7 +4,7 @@ import FondosItem from "./FondosItem";
 
 export default function Fondos({ items }){
   return (
-    <div className="relative flex justify-center items-center h-auto  w-full p-4 sm:p-6 md:p-8 lg:p-10">
+    <div id='donaciones' className="relative flex justify-center items-center h-auto  w-full p-4 sm:p-6 md:p-8 lg:p-10">
       <div className=" flex flex-col justify-center items-center  max-w-7xl space-y-10 lg:space-y-20 border-t-2 pt-12 ">
         {/* Title */}
         <div className="flex flex-col justify-center items-center space-y-4">

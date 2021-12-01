@@ -18,6 +18,7 @@ import NuestrosFundadores from './NuestrosFundadores'
 import Home from './Home'
 import item from './item'
 import logros from './logros'
+import NuestrosVoluntarios from './NuestrosVoluntarios'
 
 
 // Then we give our schema to the builder and provide the result to Sanity
@@ -35,6 +36,7 @@ export default createSchema({
     NuestrasVisitas,
     QuienesSomos,
     NuestrosFundadores,
+    NuestrosVoluntarios,
     NuestrosPatrocinadores,
     logros,
     item,

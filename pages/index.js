@@ -8,9 +8,9 @@ import QuienesSomos from "../components/QuienesSomos";
 import Patrocinadores from "../components/Patrocinadores";
 import Fondos from "../components/Fondos";
 import NuestrosFundadores from "../components/NuestrosFundadores";
+import NuestrosVoluntarios from "../components/NuestrosVoluntarios";
+import Footer from '../components/Footer';
 import { sanityClient } from "../sanity";
-import { createContext } from "react";
-
 export default function Home({
   home,
   ayuda,
@@ -20,6 +20,7 @@ export default function Home({
   quienesSomos,
   nuestrosFundadores,
   nuestrosPatrocinadores,
+  nuestrosVoluntarios,
   members,
   visitas,
   patrocinadores,
@@ -41,10 +42,12 @@ export default function Home({
           nuestrosFundadores={nuestrosFundadores}
           members={members}
         />
+        <NuestrosVoluntarios nuestrosVoluntarios={ nuestrosVoluntarios }/>
         <Patrocinadores
           nuestrosPatrocinadores={nuestrosPatrocinadores}
           patrocinadores={patrocinadores}
         />
+        <Footer />
       </div>
     </>
   );
@@ -72,6 +75,9 @@ export const getServerSideProps = async ({ params }) => {
   const nuestrosFundadoresQuery = `*[_type == "nuestrosFundadores"][0]{
  title, description
   }`;
+  const nuestrosVoluntariosQuery = `*[_type == "nuestrosVoluntarios"][0]{
+ title, description, voluntarios
+  }`;
   const nuestrosPatrocinadoresQuery = `*[_type == "nuestrosPatrocinadores"][0]{
  title, description
   }`;
@@ -93,6 +99,7 @@ export const getServerSideProps = async ({ params }) => {
   const nuestrasVisitas = await sanityClient.fetch(nuestrasVisitasQuery);
   const quienesSomos = await sanityClient.fetch(quienesSomosQuery);
   const nuestrosFundadores = await sanityClient.fetch(nuestrosFundadoresQuery);
+  const nuestrosVoluntarios = await sanityClient.fetch(nuestrosVoluntariosQuery);
   const nuestrosPatrocinadores = await sanityClient.fetch(
     nuestrosPatrocinadoresQuery
   );
@@ -109,6 +116,7 @@ export const getServerSideProps = async ({ params }) => {
       nuestrasVisitas,
       quienesSomos,
       nuestrosFundadores,
+      nuestrosVoluntarios,
       nuestrosPatrocinadores,
       members,
       visitas,
