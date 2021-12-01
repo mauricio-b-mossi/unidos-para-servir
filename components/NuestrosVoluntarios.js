@@ -51,7 +51,7 @@ export default function NuestrosVoluntarios({nuestrosVoluntarios}) {
 
               <div className="flex flex-wrap justify-center items-center gap-10 lg:gap-16 max-w-xs sm:max-w-sm lg:max-w-7xl font-semibold">
                   {voluntarios.map((voluntario, index) => (
-                      <p key={index}>{ voluntario}</p>
+                      <p className="transform transition duration-150 hover:scale-75 hover:rotate-6 ${}" key={index}>{ voluntario}</p>
                   ))}
 
         </div>
