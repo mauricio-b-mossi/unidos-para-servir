@@ -49,7 +49,7 @@ export default function NuestrosVoluntarios({nuestrosVoluntarios}) {
           {/* </div> */}
         </div>
 
-              <div className="flex flex-wrap justify-center items-center gap-10 lg:gap-16 max-w-xs sm:max-w-sm font-semibold">
+              <div className="flex flex-wrap justify-center items-center gap-10 lg:gap-16 max-w-xs sm:max-w-sm lg:max-w-7xl font-semibold">
                   {voluntarios.map((voluntario, index) => (
                       <p key={index}>{ voluntario}</p>
                   ))}
